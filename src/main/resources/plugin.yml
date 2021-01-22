@@ -1,0 +1,54 @@
+name: BurnEmpire
+version: ${project.version}
+main: me.koba1.burnempire.Main
+authors: [ koba1 ]
+description: BurnEmpire saját pluginja
+
+commands:
+  stats:
+    aliases: [stat]
+    description: Statisztikád megnézése
+  sLeTR8cyvXkyGrxt:
+  discord:
+    aliases: [dc]
+    description: Discord link megnézése
+  burnempire:
+    aliases: [be]
+    description: Főparancs
+  webshop:
+    aliases: [ws, market, webmarket, wm]
+  FIYBOTYJEUWOZ1W0:
+  telkek:
+    description: Telekekhez teleportálás
+  moneybooster:
+  update:
+    aliases: [news, ujdonsagok, ujdonsag, újdonságok, újdonság, frissítés]
+  resetupdate:
+    aliases: [ru]
+  sbreload:
+    aliases: [scoreboardreload, sbreload, sbr]
+  helps:
+  ip:
+  mention:
+    aliases: [tag, mentions, tagged, mentioned]
+  youtuber:
+    aliases: [yt, youtube]
+  maintenance:
+    aliases: [karbantartás, karbantartas]
+  crates:
+    aliases: [ládák, lada, láda, ladak, crate, crateses]
+  scoreboardmonitor:
+    aliases: [sbm, monitor]
+  silent:
+  OADVNdig4J68f2Lf:
+  mines1:
+    aliases: [banyateleport, bányateleportok, bányák, banyak, mine, banyateleport]
+  go:
+    description: Bánya teleport
+  szabályzat:
+    aliases: [szabalyzat, szabalyok, szabályok]
+  clearmultiplier:
+  pvparena:
+    aliases: [pvparéna, aréna, arena]
+  sendembed:
+  tesztembed:
