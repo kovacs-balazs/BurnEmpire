@@ -106,6 +106,8 @@ public class killevent implements Listener {
             if (p.getAddress().getAddress().getHostAddress().equals(k.getAddress().getAddress().getHostAddress())) {
                 p.getPlayer().sendMessage("§cNe farmolj saját karakteren.");
                 k.getPlayer().sendMessage("§cNe farmolj saját karakteren.");
+            } else {
+                // owwww
             }
         }
     }

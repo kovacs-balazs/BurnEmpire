@@ -45,8 +45,8 @@ public class anvilregen implements Listener {
                         }.runTaskLater(m, 10);
                     }
                     //
-                    if(x == 660.0 && y == 4.0 && z == 169.0) {
-                        Location loc = new Location(clicked.getWorld(), (-660), 1, 169);
+                    if(x == 660.0 && y == 4.0 && z == 168.0) {
+                        Location loc = new Location(clicked.getWorld(), (-660), 4, 168);
                         loc.getBlock().setType(Material.ANVIL);
                     }
                 }

@@ -1,18 +1,8 @@
 package me.koba1.burnempire;
 
-import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.entities.MessageChannel;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
-import org.bukkit.permissions.PermissionDefault;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
-import java.awt.*;
-import java.security.Permission;
-import java.text.DateFormat;
 import java.util.*;
 import java.util.List;
 
@@ -36,6 +26,7 @@ public final class Main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new joinevents(), this);
         getServer().getPluginManager().registerEvents(new anvilregen(), this);
         getServer().getPluginManager().registerEvents(new minesteleports(), this);
+        getServer().getPluginManager().registerEvents(new fishing(), this);
         files.kills();
         files.dcbot();
         files.multipliers();
@@ -43,8 +34,8 @@ public final class Main extends JavaPlugin implements Listener {
         files.getMultipliers().options().copyDefaults(true);
         files.saveMultipliers();
 
-        new discordbotstatus(this);
-        new discordbotstatus(this).dctimer();
+        new discordbot(this);
+        new discordbot(this).dctimer();
         new timer().timer();
         new scoreboard().scoreboardtimer();
 
@@ -89,36 +80,14 @@ public final class Main extends JavaPlugin implements Listener {
         getCommand("go").setExecutor(new minesteleports());
         getCommand("pvparena").setExecutor(new minesteleports());
 
-        getCommand("sendembed").setExecutor(new discordbotstatus(this));
-        getCommand("tesztembed").setExecutor(new discordbotstatus(this));
-        // SCOREBOARD RENDEZÉST MEGNÉZNI MERT ÁTÁLLÍTOTTAM
+        getCommand("sendembed").setExecutor(new discordbot(this));
+        getCommand("tesztembed").setExecutor(new discordbot(this));
+        getCommand("stop1").setExecutor(new discordbot(this));
+
+        getCommand("rand").setExecutor(new fishing());
     }
 
-    public JDA jda;
     @Override
     public void onDisable() {
-        try {
-            Locale locale = new Locale("hu", "HU");
-            DateFormat dateFormat = DateFormat.getTimeInstance(DateFormat.DEFAULT, locale);
-            String date = dateFormat.format(new Date());
-            MessageChannel channel = jda.getTextChannelById("790739136881360917");
-            EmbedBuilder embed = new EmbedBuilder();
-
-            embed.setColor(Color.CYAN);
-            //embed.setTitle("BurnEmpire");
-            embed.setAuthor("BurnEmpire státusza", "https://i.imgur.com/LeGmjYM.png", "https://i.imgur.com/LeGmjYM.png");
-            embed.setDescription("**" + "Szerver információk" + "**"
-                    + "\nHa bármilyen problémád akadna olvasd át az 'INFO' kategóriát. Ha még mindig nem kaptál a kérdésedre választ, akkor írj a 'segítség' szobába. "
-                    + "**" + "Jó játékot!" + "**");
-
-            embed.addField("Szerver státusz:", ":x: " + "Nem elérhető", true);
-            embed.addField("Szerver IP:", "Majd itt lesz", true);
-            embed.addField("Weboldalunk:", "burnempire.minemarket.hu", true);
-
-            embed.setFooter("BurnEmpire • " + date, "https://i.imgur.com/LeGmjYM.png");
-            channel.editMessageById("801912163287302185", embed.build()).queue();
-        } catch (Exception exception) {
-            // owww
-        }
     }
 }

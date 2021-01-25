@@ -136,7 +136,7 @@ public class itemstacks implements Listener {
         ArrayList lore = new ArrayList();
         lore.add("§7Lapisbánya,");
         lore.add("§7ahol a pvp nem létezik.");
-        im.setDisplayName("§9§lSzénbánya");
+        im.setDisplayName("§9§lLapisbánya");
         im.setLore(lore);
         is.setItemMeta(im);
         return is;

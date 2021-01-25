@@ -70,7 +70,7 @@ public class minesteleports implements Listener, CommandExecutor {
         //
         if (cmd.getName().equalsIgnoreCase("go")) {
             if (args.length == 0) {
-                sender.sendMessage("§7Választható teleportok: §bbanya§7, §bszenbanya§7, §bfatelep§7, §bpvparena§'7, §blapisbanya");
+                sender.sendMessage("§7Választható teleportok: §bbanya§7, §bszenbanya§7, §bfatelep§7, §bpvparena§7, §blapisbanya§7, §benchant");
             }
             //
             //
@@ -101,11 +101,20 @@ public class minesteleports implements Listener, CommandExecutor {
                         ||args[0].equalsIgnoreCase("aréna") || args[0].equalsIgnoreCase("arena")) {
                     Bukkit.dispatchCommand(m.getServer().getConsoleSender(), "warp pvparena " + p.getName());
                 }
+                //
+                else if (args[0].equalsIgnoreCase("enchant") || args[0].equalsIgnoreCase("enchantoló")
+                        ||args[0].equalsIgnoreCase("enchantolo")) {
+                    Bukkit.dispatchCommand(m.getServer().getConsoleSender(), "warp enchant " + p.getName());
+                }
             }
         }
-
+        //
         else if(cmd.getName().equalsIgnoreCase("pvparena")) {
             Bukkit.dispatchCommand(m.getServer().getConsoleSender(), "warp pvparena " + p.getName());
+        }
+        //
+        else if(cmd.getName().equalsIgnoreCase("enchant")) {
+            Bukkit.dispatchCommand(m.getServer().getConsoleSender(), "warp enchant " + p.getName());
         }
         return false;
     }

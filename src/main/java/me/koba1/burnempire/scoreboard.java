@@ -65,113 +65,70 @@ public class scoreboard implements Listener {
                         Score s5 = o.getScore("§b§l» §7Játékosok:");
                         Score s6 = o.getScore("§b" + playersonline + " §7/ §b" + playermax);
                         Score s7 = o.getScore("   ");
-                        s1.setScore(7);
-                        s2.setScore(6);
-                        s3.setScore(5);
-                        s4.setScore(4);
-                        s5.setScore(3);
-                        s6.setScore(2);
-                        s7.setScore(1);
-
-                        if (sellandkillmoneyboostexpire > 0 && sellandkillmoneybooster > 0) {
-                            Score s8 = o.getScore("§b§l» §7Szorzó:");
-                            Score s9 = o.getScore("§b" + sellandkillmoneybooster + "x§7 | Lejárat: " + ChatColor.AQUA + lejarat);
-                            Score s10 = o.getScore("    ");
-                            Score s11 = o.getScore("§b§l» §7Menü:");
-                            Score s12 = o.getScore("§b/menu");
-                            boolean silent = m.getConfig().getBoolean("Join-Quit." + p.getName() + ".silent");
-                            Score s13 = o.getScore("     ");
-                            Score s14 = o.getScore("§b§l» §7Silent:");
-                            if (p.isOp()) {
-                                if (silent == true) {
-                                    Score s15 = o.getScore("§bBekapcsolva");
-                                    s1.setScore(15);
-                                    s2.setScore(14);
-                                    s3.setScore(13);
-                                    s4.setScore(12);
-                                    s5.setScore(11);
-                                    s6.setScore(10);
-                                    s7.setScore(9);
-                                    s8.setScore(8);
-                                    s9.setScore(7);
-                                    s10.setScore(6);
-                                    s11.setScore(5);
-                                    s12.setScore(4);
-                                    s13.setScore(3);
-                                    s14.setScore(2);
-                                    s15.setScore(1);
-                                } else {
-                                    s1.setScore(12);
-                                    s2.setScore(11);
-                                    s3.setScore(10);
-                                    s4.setScore(9);
-                                    s5.setScore(8);
-                                    s6.setScore(7);
-                                    s7.setScore(6);
-                                    s8.setScore(5);
-                                    s9.setScore(4);
-                                    s10.setScore(3);
-                                    s11.setScore(2);
-                                    s12.setScore(1);
-                                }
-                            } else {
-                                s1.setScore(12);
-                                s2.setScore(11);
-                                s3.setScore(10);
-                                s4.setScore(9);
-                                s5.setScore(8);
-                                s6.setScore(7);
-                                s7.setScore(6);
-                                s8.setScore(5);
-                                s9.setScore(4);
-                                s10.setScore(3);
-                                s11.setScore(2);
-                                s12.setScore(1);
-                            }
-                        } else {
-                            boolean silent = m.getConfig().getBoolean("Join-Quit." + p.getName() + ".silent");
-                            Score s8 = o.getScore("§b§l» §7Menü:");
-                            Score s9 = o.getScore("§b/menu");
-                            Score s10 = o.getScore("     ");
-                            Score s11 = o.getScore("§b§l» §7Silent:");
-                            if (p.isOp()) {
-                                if (silent == true) {
-                                    Score s12 = o.getScore("§bBekapcsolva");
-                                    s1.setScore(12);
-                                    s2.setScore(11);
-                                    s3.setScore(10);
-                                    s4.setScore(9);
-                                    s5.setScore(8);
-                                    s6.setScore(7);
-                                    s7.setScore(6);
-                                    s8.setScore(5);
-                                    s9.setScore(4);
-                                    s10.setScore(3);
-                                    s11.setScore(2);
-                                    s12.setScore(1);
-                                } else {
-                                    s1.setScore(12);
-                                    s2.setScore(11);
-                                    s3.setScore(10);
-                                    s4.setScore(9);
-                                    s5.setScore(8);
-                                    s6.setScore(7);
-                                    s7.setScore(6);
-                                    s8.setScore(5);
-                                    s9.setScore(4);
-                                }
-                            } else {
-                                s1.setScore(12);
-                                s2.setScore(11);
-                                s3.setScore(10);
-                                s4.setScore(9);
-                                s5.setScore(8);
-                                s6.setScore(7);
-                                s7.setScore(6);
-                                s8.setScore(5);
-                                s9.setScore(4);
-                            }
-                            //}
+                        Score s8 = o.getScore("§b§l» §7Szorzó:");
+                        Score s9 = o.getScore("§b" + sellandkillmoneybooster + "x§7 | Lejárat: " + ChatColor.AQUA + lejarat);
+                        Score s10 = o.getScore("    ");
+                        Score s11 = o.getScore("§b§l» §7Menü:");
+                        Score s12 = o.getScore("§b/menu");
+                        Score s13 = o.getScore("     ");
+                        Score s14 = o.getScore("§b§l» §7Silent:");
+                        Score s15 = o.getScore("§bBekapcsolva");
+                        s1.setScore(9);
+                        s2.setScore(8);
+                        s3.setScore(7);
+                        s4.setScore(6);
+                        s5.setScore(5);
+                        s6.setScore(4);
+                        s7.setScore(3);
+                        s11.setScore(2);
+                        s12.setScore(1);
+                        boolean silent = m.getConfig().getBoolean("Join-Quit." + p.getName() + ".silent");
+                        if (sellandkillmoneyboostexpire > 0 && sellandkillmoneybooster > 0 && silent == true) {
+                            s1.setScore(16);
+                            s2.setScore(15);
+                            s3.setScore(14);
+                            s4.setScore(13);
+                            s5.setScore(12);
+                            s6.setScore(11);
+                            s7.setScore(10);
+                            s8.setScore(9);
+                            s9.setScore(8);
+                            s10.setScore(7);
+                            s11.setScore(5);
+                            s12.setScore(4);
+                            s13.setScore(3);
+                            s14.setScore(2);
+                            s15.setScore(1);
+                        }
+                        //
+                        else if(silent == true) {
+                            s1.setScore(13);
+                            s2.setScore(12);
+                            s3.setScore(11);
+                            s4.setScore(10);
+                            s5.setScore(9);
+                            s6.setScore(8);
+                            s7.setScore(7);
+                            s11.setScore(5);
+                            s12.setScore(4);
+                            s13.setScore(3);
+                            s14.setScore(2);
+                            s15.setScore(1);
+                        }
+                        //
+                        else if(sellandkillmoneyboostexpire > 0 && sellandkillmoneybooster > 0) {
+                            s1.setScore(12);
+                            s2.setScore(11);
+                            s3.setScore(10);
+                            s4.setScore(9);
+                            s5.setScore(8);
+                            s6.setScore(7);
+                            s7.setScore(6);
+                            s8.setScore(5);
+                            s9.setScore(4);
+                            s10.setScore(3);
+                            s11.setScore(2);
+                            s12.setScore(1);
                         }
                         p.setScoreboard(b);
                     }

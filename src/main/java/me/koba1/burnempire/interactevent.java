@@ -34,9 +34,6 @@ public class interactevent implements Listener {
                                 files.saveMultipliers();
 
                                 p.sendMessage("§7Szorzó aktiválva §a+30 percre§7!");
-                                if(multiplier <= 0) {
-                                    timer.timer();
-                                }
                             }
                         }
                     }
